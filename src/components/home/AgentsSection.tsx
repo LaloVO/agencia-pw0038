@@ -50,13 +50,6 @@ const AgentsSection = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div>
-            <span
-              className={`text-primary text-xs uppercase tracking-[0.2em] font-bold block mb-4 transition-all duration-700 delay-300 ${
-                isVisible ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              Nuestro Equipo
-            </span>
             <h2
               className={`font-serif text-4xl md:text-5xl transition-all duration-1000 delay-400 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'

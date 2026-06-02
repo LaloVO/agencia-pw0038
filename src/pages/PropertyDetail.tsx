@@ -102,27 +102,26 @@ const PropertyDetail = () => {
             
             {/* Details (Left Columns) */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="px-3.5 py-1 bg-[#C09A6F] text-[#05121E] text-[10px] font-sans font-bold uppercase tracking-wider rounded-full shadow-md">
-                  {badge}
-                </span>
-                {property.tipo && (
-                  <span className="px-3.5 py-1 bg-white/5 border border-white/10 text-white text-[10px] font-sans font-semibold uppercase tracking-wider rounded-full capitalize">
-                    {property.tipo}
-                  </span>
-                )}
-              </div>
-
-              <h1 className="font-sans font-extrabold text-3xl md:text-4xl text-white tracking-wide mb-3 leading-tight">
+              <h1 className="font-sans font-extrabold text-3xl md:text-4xl text-white tracking-wide mb-4 leading-tight">
                 {property.nombre}
               </h1>
 
-              {location && (
-                <p className="flex items-center gap-1.5 text-[#9BB0C1] font-sans text-xs md:text-sm mb-8">
-                  <MapPin className="w-4 h-4 text-[#C09A6F] shrink-0" />
-                  {location}
-                </p>
-              )}
+              <div className="flex flex-wrap items-center gap-3 mb-8">
+                <span className="px-3 py-1 bg-[#C09A6F] text-[#05121E] text-[10px] font-sans font-bold uppercase tracking-wider rounded-full shadow-sm">
+                  {badge}
+                </span>
+                {property.tipo && (
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 text-white text-[10px] font-sans font-semibold uppercase tracking-wider rounded-full capitalize">
+                    {property.tipo}
+                  </span>
+                )}
+                {location && (
+                  <span className="flex items-center gap-1.5 text-[#9BB0C1] font-sans text-xs md:text-sm ml-1">
+                    <MapPin className="w-3.5 h-3.5 text-[#C09A6F] shrink-0" />
+                    {location}
+                  </span>
+                )}
+              </div>
 
               {/* Specs Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

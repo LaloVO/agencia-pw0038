@@ -546,7 +546,7 @@ export default function FormularioMultiStep({ onSubmitComplete }: FormularioMult
                   className={`w-9 h-9 rounded-full border-2 flex items-center justify-center font-sans font-medium text-xs transition-all duration-300
                     ${isCompleted ? "bg-[#C09A6F] border-[#C09A6F] text-white" : ""}
                     ${isCurrent && !isCompleted ? "border-[#C09A6F] bg-[#07192A]/50 backdrop-blur-md text-[#C09A6F] scale-105 shadow-md" : ""}
-                    ${!isCurrent && !isCompleted ? "border-[#6E6259]/30 bg-transparent text-[#9BB0C1]/50" : ""}
+                    ${!isCurrent && !isCompleted ? "border-[#9BB0C1]/20 bg-transparent text-[#9BB0C1]/50" : ""}
                     ${isClickable ? "cursor-pointer hover:scale-105" : "cursor-not-allowed opacity-40"}
                   `}
                 >
@@ -559,7 +559,7 @@ export default function FormularioMultiStep({ onSubmitComplete }: FormularioMult
                 </span>
               </div>
               {!isLast && (
-                <div className="h-[2px] flex-1 bg-[#6E6259]/20 rounded min-w-[20px]">
+                <div className="h-[2px] flex-1 bg-[#9BB0C1]/10 rounded min-w-[20px]">
                   <div
                     className="h-full bg-[#C09A6F] transition-all duration-300 rounded"
                     style={{ width: isCompleted ? "100%" : "0%" }}
@@ -1248,7 +1248,7 @@ export default function FormularioMultiStep({ onSubmitComplete }: FormularioMult
                                     onClick={() => setCitaVirtualHora(hour)}
                                     className={`h-9 rounded-full text-xs font-sans font-medium border transition-all duration-300
                                       ${isBusy 
-                                        ? "bg-[#6E6259]/5 border-white/5 text-[#9BB0C1]/30 cursor-not-allowed line-through" 
+                                        ? "bg-[#9BB0C1]/5 border-white/5 text-[#9BB0C1]/30 cursor-not-allowed line-through" 
                                         : isSelected
                                           ? "bg-[#C09A6F] border-[#C09A6F] text-white shadow-md"
                                           : "bg-[#07192A]/50 backdrop-blur-md border-white/10 text-[#9BB0C1] hover:border-[#C09A6F] hover:bg-[#0B1C28]"
@@ -1302,7 +1302,7 @@ export default function FormularioMultiStep({ onSubmitComplete }: FormularioMult
                           ) : isUploaded ? (
                             <CheckCircle className="w-5 h-5 text-green-600 shrink-0" />
                           ) : (
-                            <div className={`w-5 h-5 rounded-full border-2 shrink-0 ${doc.requerido ? "border-red-400" : "border-[#6E6259]/30"}`} />
+                            <div className={`w-5 h-5 rounded-full border-2 shrink-0 ${doc.requerido ? "border-red-400" : "border-white/10"}`} />
                           )}
                           <div>
                             <p className="font-sans font-medium text-sm text-white">
