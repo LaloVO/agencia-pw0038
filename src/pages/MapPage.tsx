@@ -222,7 +222,7 @@ const MapPage = () => {
   return (
     <>
       <Helmet>
-        <title>ZAVIĀN | Explorar Propiedades — Querétaro</title>
+        <title>Agencia | Explorar Propiedades — Querétaro</title>
         <meta
           name="description"
           content="Explora nuestro catálogo exclusivo de propiedades en el mapa interactivo de Querétaro."

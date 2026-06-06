@@ -64,29 +64,46 @@ const PropertyMap = ({ properties, mapboxToken, centerLngLat }: PropertyMapProps
   const markersRef = useRef<mapboxgl.Marker[]>([]);
   const boundsFitRef = useRef(false);
   const [selected, setSelected] = useState<MapProperty | null>(null);
+  const [mapError, setMapError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!containerRef.current || !mapboxToken) return;
 
     if (mapRef.current) {
-      mapRef.current.remove();
+      try {
+        mapRef.current.remove();
+      } catch (e) {
+        console.warn("Error removing map:", e);
+      }
       mapRef.current = null;
     }
     boundsFitRef.current = false;
 
-    mapboxgl.accessToken = mapboxToken;
-    const map = new mapboxgl.Map({
-      container: containerRef.current,
-      style: 'mapbox://styles/mapbox/light-v11',
-      center: [-99.1332, 19.4326],
-      zoom: 11,
-    });
-    mapRef.current = map;
-    map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
+    try {
+      mapboxgl.accessToken = mapboxToken;
+      const map = new mapboxgl.Map({
+        container: containerRef.current,
+        style: 'mapbox://styles/mapbox/light-v11',
+        center: [-99.1332, 19.4326],
+        zoom: 11,
+      });
+      mapRef.current = map;
+      map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
+      setMapError(null);
+    } catch (error: any) {
+      console.error("Mapbox initialization error:", error);
+      setMapError(error?.message || "Error al inicializar el mapa. Verifica tu configuración o si WebGL está activado.");
+    }
 
     return () => {
-      map.remove();
-      mapRef.current = null;
+      if (mapRef.current) {
+        try {
+          mapRef.current.remove();
+        } catch (e) {
+          // ignore
+        }
+        mapRef.current = null;
+      }
     };
   }, [mapboxToken]);
 
@@ -126,7 +143,7 @@ const PropertyMap = ({ properties, mapboxToken, centerLngLat }: PropertyMapProps
 
         el.addEventListener('mouseenter', () => {
           inner.style.transform = 'scale(1.08)';
-          inner.style.background = '#4a3728';
+          inner.style.background = '#c09a6f';
         });
         el.addEventListener('mouseleave', () => {
           inner.style.transform = 'scale(1)';
@@ -209,9 +226,26 @@ const PropertyMap = ({ properties, mapboxToken, centerLngLat }: PropertyMapProps
 
   return (
     <div className="relative w-full h-full">
-      <div ref={containerRef} className="w-full h-full" />
+      {mapError ? (
+        <div className="absolute inset-0 bg-[#07192A] flex flex-col items-center justify-center p-6 text-center text-white border border-white/5 rounded-3xl">
+          <div className="w-12 h-12 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center mb-6">
+            <X className="w-6 h-6" />
+          </div>
+          <h3 className="font-sans font-bold text-base mb-2">Error de Inicialización del Mapa</h3>
+          <p className="text-[#D1C7BD] text-xs max-w-sm mb-6 leading-relaxed font-semibold">
+            {mapError.toLowerCase().includes("webgl")
+              ? "Tu navegador o tarjeta gráfica no soportan WebGL, el cual es requerido por Mapbox para renderizar mapas interactivos 3D."
+              : "No se pudo cargar el mapa. Verifica tu conexión a internet o la clave pública de Mapbox."}
+          </p>
+          <p className="text-muted-foreground text-[10px] uppercase tracking-widest font-extrabold">
+            Puedes consultar el catálogo en la lista lateral
+          </p>
+        </div>
+      ) : (
+        <div ref={containerRef} className="w-full h-full" />
+      )}
 
-      {selected && (
+      {selected && !mapError && (
         <div className="absolute bottom-6 left-4 w-72 z-20 animate-fade-in">
           <div className="bg-card rounded-xl shadow-elegant overflow-hidden">
             <div className="relative">
@@ -253,7 +287,7 @@ const PropertyMap = ({ properties, mapboxToken, centerLngLat }: PropertyMapProps
         </div>
       )}
 
-      {!mapboxToken && (
+      {!mapboxToken && !mapError && (
         <div className="absolute inset-0 flex items-center justify-center bg-muted/80">
           <p className="text-sm text-muted-foreground">Configurando mapa…</p>
         </div>

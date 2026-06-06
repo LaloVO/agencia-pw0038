@@ -119,7 +119,7 @@ const HeroCanvas = () => {
         <div className="w-full md:w-[55%] h-full relative">
           <img 
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop" 
-            alt="Zavián Modern Architecture"
+            alt="Agencia Modern Architecture"
             className="w-full h-full object-cover object-center opacity-40 md:opacity-35"
           />
           {/* Fades to blend into single surface background */}
@@ -142,13 +142,13 @@ const HeroCanvas = () => {
       <div className="relative z-10 w-full max-w-4xl my-auto flex flex-col items-start">
         <h1 className="font-sans font-extrabold text-5xl md:text-7xl lg:text-[85px] text-white tracking-[0.1em] leading-none mb-1">
           <span className={`block transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            ZAVIĀN
+            Agencia
           </span>
         </h1>
         <div className={`flex items-center gap-4 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <span className="h-[2px] w-12 bg-[#C09A6F]" />
           <h2 className="font-sans font-light text-base md:text-xl tracking-[0.4em] text-[#D1C7BD] uppercase">
-            BY LOS NAVAS
+            BY Agencia
           </h2>
         </div>
 

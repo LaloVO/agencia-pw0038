@@ -26,8 +26,8 @@ const Navbar = () => {
     { href: '/solicita-inmueble', label: 'Búsqueda Inteligente' },
   ];
 
-  const siteTitle = "ZAVIĀN";
-  const siteSubtitle = "BY LOS NAVAS";
+  const siteTitle = "Agencia";
+  const siteSubtitle = "BY Agencia";
 
   return (
     <>
@@ -129,7 +129,7 @@ const Navbar = () => {
           </div>
 
           <div className="text-[10px] text-muted-foreground tracking-wider font-light">
-            © {new Date().getFullYear()} ZAVIĀN.
+            © {new Date().getFullYear()} Agencia.
           </div>
         </div>
       </div>

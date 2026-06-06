@@ -8,10 +8,10 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex flex-col items-start group">
               <span className="font-sans font-extrabold text-2xl tracking-[0.2em] text-white transition-colors duration-300 group-hover:text-accent">
-                ZAVIĀN
+                Agencia
               </span>
               <span className="font-sans font-light text-[10px] tracking-[0.3em] text-[#D1C7BD] -mt-0.5 transition-colors duration-300 group-hover:text-white">
-                BY LOS NAVAS
+                BY Agencia
               </span>
             </Link>
             <p className="font-sans text-xs text-[#9BB0C1] max-w-xs mt-4 leading-relaxed font-light">
@@ -21,7 +21,7 @@ const Footer = () => {
 
           <div className="flex gap-8 text-[10px] uppercase tracking-widest font-sans font-semibold">
             <a 
-              href="https://www.instagram.com/zavianbylosnavas/" 
+              href="https://www.instagram.com/Agenciabylosnavas/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-[#9BB0C1] hover:text-[#C09A6F] transition-colors"
@@ -38,13 +38,13 @@ const Footer = () => {
               href="#concepto" 
               className="text-[#9BB0C1] hover:text-[#C09A6F] transition-colors"
             >
-              ¿Por qué Zavián?
+              ¿Por qué Agencia?
             </a>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/5 text-[9px] text-[#9BB0C1]/50 uppercase tracking-widest flex flex-col sm:flex-row justify-between gap-4 font-light">
-          <span>© {new Date().getFullYear()} ZAVIĀN. Todos los derechos reservados.</span>
+          <span>© {new Date().getFullYear()} Agencia. Todos los derechos reservados.</span>
           <span>Desarrollado para Agencia Satélite CBF</span>
         </div>
       </div>

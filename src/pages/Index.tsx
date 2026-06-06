@@ -11,10 +11,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>ZAVIĀN | By Los Navas — Bienes Raíces Querétaro</title>
+        <title>Agencia | By Agencia — Bienes Raíces Querétaro</title>
         <meta
           name="description"
-          content="En ZAVIĀN te ayudamos a encontrar propiedades exclusivas que combinan calidad de vida, diseño y visión de futuro en Querétaro. Encuentra tu espacio ideal con Los Navas."
+          content="En Agencia te ayudamos a encontrar propiedades exclusivas que combinan calidad de vida, diseño y visión de futuro en Querétaro. Encuentra tu espacio ideal con Agencia."
         />
       </Helmet>
 

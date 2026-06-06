@@ -44,10 +44,10 @@ const BioFormCanvas = () => {
           <div className="lg:col-span-5 flex flex-col justify-between h-full lg:sticky lg:top-28">
             <div>
               <h2 className="font-sans font-extrabold text-3xl md:text-5xl text-white tracking-[0.05em] leading-tight">
-                ZAVIĀN
+                Agencia
               </h2>
               <h3 className="font-sans font-light text-sm tracking-[0.3em] text-[#9BB0C1] uppercase mt-1">
-                BY LOS NAVAS
+                BY Agencia
               </h3>
 
               <div className="h-[2px] w-16 bg-[#C09A6F] my-6" />
@@ -78,7 +78,7 @@ const BioFormCanvas = () => {
                 <div className="space-y-2.5">
                   <div className="flex items-center gap-2.5 text-xs text-[#9BB0C1]">
                     <Mail className="w-3.5 h-3.5 text-[#C09A6F]" />
-                    <span>{user?.email_usuario ?? 'contacto@zavianbylosnavas.com'}</span>
+                    <span>{user?.email_usuario ?? 'contacto@Agenciabylosnavas.com'}</span>
                   </div>
                   {user?.telefono_usuario && (
                     <div className="flex items-center gap-2.5 text-xs text-[#9BB0C1]">

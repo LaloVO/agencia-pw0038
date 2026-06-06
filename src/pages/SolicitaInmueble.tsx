@@ -10,7 +10,7 @@ export default function SolicitaInmueble() {
   return (
     <div className="bg-[#05121E] text-white min-h-screen relative font-sans selection:bg-[#C09A6F] selection:text-[#05121E]">
       <Helmet>
-        <title>ZAVIĀN | Búsqueda Inteligente — Querétaro</title>
+        <title>Agencia | Búsqueda Inteligente — Querétaro</title>
         <meta
           name="description"
           content="Completa nuestra solicitud inteligente de búsqueda inmobiliaria. Evaluamos tu estilo de vida y presupuesto para encontrar tu propiedad ideal en Querétaro."

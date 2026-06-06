@@ -11,10 +11,10 @@ export default function PropertiesPage() {
   return (
     <div className="bg-[#05121E] text-white min-h-screen relative font-sans selection:bg-[#C09A6F] selection:text-[#05121E]">
       <Helmet>
-        <title>ZAVIĀN | Portafolio de Propiedades — Querétaro</title>
+        <title>Agencia | Portafolio de Propiedades — Querétaro</title>
         <meta
           name="description"
-          content="Explora nuestra colección de propiedades y residencias exclusivas en Querétaro con ZAVIĀN."
+          content="Explora nuestra colección de propiedades y residencias exclusivas en Querétaro con Agencia."
         />
       </Helmet>
 

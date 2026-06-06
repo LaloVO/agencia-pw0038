@@ -32,7 +32,7 @@ const ServicesSection = () => {
     {
       icon: Home,
       title: "Arquitectura y Diseño de Autor",
-      desc: "ZAVIĀN es sinónimo de diseño y visión de futuro. Te asesoramos en la selección de propiedades con propuestas arquitectónicas modernas, materiales de alta calidad y distribuciones eficientes."
+      desc: "Agencia es sinónimo de diseño y visión de futuro. Te asesoramos en la selección de propiedades con propuestas arquitectónicas modernas, materiales de alta calidad y distribuciones eficientes."
     }
   ];
 

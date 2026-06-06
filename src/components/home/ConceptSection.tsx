@@ -56,7 +56,7 @@ const ConceptSection = () => {
         {/* Header */}
         <div className="max-w-3xl mb-16">
           <h2 className="font-sans font-extrabold text-3xl md:text-5xl text-white tracking-[0.05em] leading-tight">
-            ¿Por qué ZAVIĀN?
+            ¿Por qué Agencia?
           </h2>
           <p className="text-sm md:text-base text-[#9BB0C1] font-light mt-4 leading-relaxed">
             No somos una inmobiliaria tradicional. Ayudamos a familias e inversionistas a reubicar su capital de manera inteligente de la CDMX a Querétaro, logrando un balance perfecto entre salud financiera y calidad de vida.
