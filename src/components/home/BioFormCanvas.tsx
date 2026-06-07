@@ -78,7 +78,7 @@ const BioFormCanvas = () => {
                 <div className="space-y-2.5">
                   <div className="flex items-center gap-2.5 text-xs text-[#9BB0C1]">
                     <Mail className="w-3.5 h-3.5 text-[#C09A6F]" />
-                    <span>{user?.email_usuario ?? 'contacto@Agenciabylosnavas.com'}</span>
+                    <span>{user?.email_usuario ?? 'contacto@agencia.com'}</span>
                   </div>
                   {user?.telefono_usuario && (
                     <div className="flex items-center gap-2.5 text-xs text-[#9BB0C1]">

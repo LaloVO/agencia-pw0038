@@ -21,7 +21,7 @@ const Footer = () => {
 
           <div className="flex gap-8 text-[10px] uppercase tracking-widest font-sans font-semibold">
             <a 
-              href="https://www.instagram.com/Agenciabylosnavas/" 
+              href="#" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-[#9BB0C1] hover:text-[#C09A6F] transition-colors"
